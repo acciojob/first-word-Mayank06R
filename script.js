@@ -1,13 +1,15 @@
 function firstWord(s) {
   // your code here
 	 let strippedString = str.trimStart();
-    let firstSpaceIndex = strippedString.indexOf(' ');
-    if (firstSpaceIndex === -1) {
-        return strippedString;
-    }
+    let firstWord = "";
     
-    // Return the substring from the start to the first space
-    return strippedString.slice(0, firstSpaceIndex);
+    for (let i = 0; i < strippedString.length; i++) {
+        if (strippedString[i] === ' ') {
+            break; 
+        }
+        firstWord += strippedString[i];
+    }
+    return firstWord;
 }
 
 // Do not change the code below
